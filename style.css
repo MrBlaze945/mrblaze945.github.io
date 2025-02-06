@@ -501,7 +501,7 @@ textarea {
 }
 
 /* TABLET ONLY (MD) */
-@media screen and (min-width: 500px) and (max-width: 999.97px) {
+@media screen and (min-width: 600px) and (max-width: 999.97px) {
   .nav-list {
     display: flex;
     justify-content: center;
@@ -534,7 +534,7 @@ textarea {
   }
 
   .news-card {
-    flex: 0 0 32.33%; /* Ensures exactly 3 cards fit in view */
+    flex: 0 0 32%; /* Ensures exactly 3 cards fit in view */
     width: 33.33vw; /* Adjust width dynamically */
     height: auto;
     border-radius: 8px;
