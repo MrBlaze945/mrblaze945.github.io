@@ -557,14 +557,6 @@ h2 {
   overflow-wrap: break-word;
 }
 
-.metadata {
-  font-size: 14px;
-  color: #666;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .review-score {
   position: absolute;
   right: 140px;
@@ -589,12 +581,29 @@ h2 {
   color: black;
 }
 
+.metadata {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  flex-direction: column; /* Keep items stacked */
+  align-items: flex-start;
+  gap: 3px;
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+.metadata-item {
+  display: block;
+  white-space: nowrap; /* Ensures each metadata item does not wrap */
+}
+
 
 /* MOBILE AND TABLET ONLY (SM AND MD) */
 @media screen and (max-width: 999.97px) {
   .hide-on-mobile {
     display: none;
   }
+
+  
 
   .no-heading {
     padding-top: 4rem;
@@ -613,6 +622,7 @@ h2 {
     padding-left: 20px;
     padding-right: 20px;
   }
+
 }
 
 /* TABLET ONLY (MD) */
@@ -624,6 +634,8 @@ h2 {
     margin-top: 1rem;
     padding-bottom: 2rem;
   }
+
+  
 
   .scroll-container {
     width: 100%;
