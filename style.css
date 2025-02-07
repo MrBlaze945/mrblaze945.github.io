@@ -749,12 +749,12 @@ textarea {
   }
 
   .featured-news-card {
-    flex: 1;
-    width: clamp(150px, 46.5vw, 300px);
-    height: clamp(200px, 46.5vw, 300px);
-    position: relative;
+    flex: 0 0 calc(100% / 2 - 7px); /* Ensures exactly 4 articles fit */
+    max-width: calc(100% / 2 - 7px);
+    height: 250px; /* Set a fixed height */
+    max-height: 250px; /* Limits height */
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* Prevents content from exceeding the height */
     scroll-snap-align: start;
   }
 
