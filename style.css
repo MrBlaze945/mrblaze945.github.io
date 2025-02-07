@@ -109,6 +109,7 @@ textarea {
 .page-title a {
   color: black;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .nav-button {
