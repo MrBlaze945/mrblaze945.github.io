@@ -198,8 +198,8 @@ textarea {
 
 .news-card {
   position: relative; /* Ensures .overlay stays within the card */
-  flex: 0 0 calc(100% / 2 - 10px);
-  max-width: calc(100% / 2 - 10px);
+  flex: 0 0 calc(100% / 2 - 5.3px);
+  max-width: calc(100% / 2 - 5.3px);
   height: 250px; /* Set a fixed height */
   max-height: 250px; /* Limits height */
   border-radius: 8px;
@@ -209,10 +209,11 @@ textarea {
 
 
 .featured-news-card {
-  flex: 0 0 auto;
-  width: clamp(150px, 47vw, 300px);
-  height: clamp(200px, 47vw, 300px);
-  position: relative;
+  position: relative; /* Ensures .overlay stays within the card */
+  flex: 0 0 calc(100% / 2 - 5.3px);
+  max-width: calc(100% / 2 - 5.3px);
+  height: 250px; /* Set a fixed height */
+  max-height: 250px; /* Limits height */
   border-radius: 8px;
   overflow: hidden;
   scroll-snap-align: start;
@@ -539,8 +540,8 @@ textarea {
   }
 
   .news-card {
-    flex: 0 0 calc(100% / 3 - 10px); /* Ensures exactly 4 articles fit */
-    max-width: calc(100% / 3 - 10px);
+    flex: 0 0 calc(100% / 3 - 7px); /* Ensures exactly 4 articles fit */
+    max-width: calc(100% / 3 - 7px);
     height: 250px; /* Set a fixed height */
     max-height: 250px; /* Limits height */
     border-radius: 8px;
@@ -549,12 +550,12 @@ textarea {
 }
 
   .featured-news-card {
-    flex: 1;
-    width: clamp(150px, 48vw, 400px);
-    height: clamp(200px, 48vw, 350px);
-    position: relative;
+    flex: 0 0 calc(100% / 2 - 7px); /* Ensures exactly 4 articles fit */
+    max-width: calc(100% / 2 - 7px);
+    height: 250px; /* Set a fixed height */
+    max-height: 250px; /* Limits height */
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* Prevents content from exceeding the height */
     scroll-snap-align: start;
   }
 
@@ -586,13 +587,7 @@ textarea {
     grid-column: span 1; /* Keeps any extra articles aligned correctly */
   }
 
-  .featured-news-card:nth-child(3) {
-    display: none;
-  }
 
-  .featured-news-card:nth-child(3) {
-    display: none;
-  }
 
   .footer-row {
     display: flex;
