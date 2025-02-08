@@ -116,7 +116,7 @@ textarea {
   cursor: pointer;
   padding: 0.5rem 0;
   width: 50px;
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .nav-list,
@@ -632,17 +632,20 @@ h2 {
 }
 
 .contact-wrapper {
+
   flex: 1;
   display: flex;
-  margin: 50px auto; /* Adds space around the form */
+  margin: 20px auto; /* Adds space around the form */
   width: 80%;
   max-width: 1000px;
+  height: 700px;
   background: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   padding: 20px; /* Adds space inside the wrapper */
 }
+
 
 .contact-page .contact-wrapper {
   display: flex;
@@ -658,7 +661,6 @@ h2 {
 .contact-page .contact-form {
   flex: 1;
   padding: 40px;
-  padding-top: 0px;
   background: white;
 }
 
@@ -762,6 +764,11 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 15px;
+}
+
+.contact-image {
+  height: 750px;
 }
 
 .contact-page .overlay {
@@ -811,7 +818,6 @@ h2 {
 .contact-page .contact-form {
   flex: 1;
   padding: 40px;
-    padding-top: 0px;
   background: white;
 }
 
@@ -908,12 +914,6 @@ h2 {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-
-.contact-page .contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .contact-page .overlay {
