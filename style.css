@@ -179,6 +179,29 @@ textarea {
   max-width: 100vw; /* Ensures it doesn’t exceed screen width */
 }
 
+.news-grid::-webkit-scrollbar,
+.featured-news-grid::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.news-grid::-webkit-scrollbar-track,
+.featured-news-grid::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 10px !important;
+}
+
+.news-grid::-webkit-scrollbar-thumb,
+.featured-news-grid::-webkit-scrollbar-thumb {
+  background: #b00000 !important;
+  border-radius: 10px !important;
+}
+
+.news-grid::-webkit-scrollbar-thumb:hover,
+.featured-news-grid::-webkit-scrollbar-thumb:hover {
+  background: #900000 !important;
+}
+
 .news-grid {
   display: flex;
   gap: 10px;
@@ -876,8 +899,8 @@ h2 {
   .featured-news-card {
     flex: 0 0 calc(100% / 2 - 7px); /* Ensures exactly 4 articles fit */
     max-width: calc(100% / 2 - 7px);
-    height: 250px; /* Set a fixed height */
-    max-height: 250px; /* Limits height */
+    height: 320px; /* Set a fixed height */
+    max-height: 320px; /* Limits height */
     border-radius: 8px;
     overflow: hidden; /* Prevents content from exceeding the height */
     scroll-snap-align: start;
