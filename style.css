@@ -182,7 +182,7 @@ textarea {
 .news-grid::-webkit-scrollbar,
 .featured-news-grid::-webkit-scrollbar {
   width: 8px !important;
-  height: 8px !important;
+  height: 5px !important;
 }
 
 .news-grid::-webkit-scrollbar-track,
@@ -899,8 +899,8 @@ h2 {
   .featured-news-card {
     flex: 0 0 calc(100% / 2 - 7px); /* Ensures exactly 4 articles fit */
     max-width: calc(100% / 2 - 7px);
-    height: 320px; /* Set a fixed height */
-    max-height: 320px; /* Limits height */
+    height: 340px; /* Set a fixed height */
+    max-height: 340px; /* Limits height */
     border-radius: 8px;
     overflow: hidden; /* Prevents content from exceeding the height */
     scroll-snap-align: start;
