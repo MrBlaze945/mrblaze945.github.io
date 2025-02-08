@@ -622,46 +622,27 @@ h2 {
 .contact-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-grow: 1; /* ✅ Ensures content expands to fill space */
   align-items: center;
-  min-height: 100vh; /* Ensures the page takes at least full viewport height */
+  min-height: 100vh;
   background-color: #f5f5f5;
-  padding: 40px 0; /* Adds space above and below */
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
+
 
 .contact-wrapper {
-
-  flex: 1;
   display: flex;
-  margin: 20px auto; /* Adds space around the form */
+  flex-wrap: wrap;
+  justify-content: center; /* Centers content */
+  align-items: center;
   width: 80%;
-  max-width: 1000px;
-  height: 700px;
+  max-width: 1200px; /* Adjust max width */
+  min-height: auto;
   background: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Adds space inside the wrapper */
-}
-
-
-.contact-page .contact-wrapper {
-  display: flex;
-  width: 80%;
-  max-width: 1000px;
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Form Section */
-.contact-page .contact-form {
-  flex: 1;
-  padding: 40px;
-  background: white;
+  padding: 20px;
+  margin: 50px;
 }
 
 .contact-page .contact-heading {
@@ -676,7 +657,7 @@ h2 {
 
 .contact-page .input-group {
   display: flex;
-  gap: 15px;
+  gap: 5px;
 }
 
 .contact-page .input-field {
@@ -797,28 +778,12 @@ h2 {
   font-size: 12px;
 }
 
-.contact-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-}
-
-.contact-page .contact-wrapper {
-  display: flex;
-  width: 80%;
-  max-width: 1000px;
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
 /* Contact Form Section */
-.contact-page .contact-form {
+
+.contact-form {
   flex: 1;
+  min-width: 300px;
   padding: 40px;
-  background: white;
 }
 
 .contact-page .contact-heading {
@@ -831,16 +796,15 @@ h2 {
   margin: 10px 0 20px;
 }
 
-.contact-page .input-group {
+.input-group {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* Ensures elements wrap instead of overflowing */
 }
 
-.contact-page .input-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  width: 100%;
+.input-field {
+  flex: 1; /* Makes both input fields share space evenly */
+  min-width: 100px; /* Prevents the inputs from getting too small */
 }
 
 .contact-page .input-field label {
@@ -848,10 +812,8 @@ h2 {
   margin-bottom: 5px;
 }
 
-.contact-page .input-field input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.input-group .input-field input {
+  width: 100%; /* Ensures inputs take full width of their container */
 }
 
 .contact-page .contact-options {
@@ -907,13 +869,12 @@ h2 {
 }
 
 /* Image Section */
-.contact-page .contact-image {
+.contact-image {
   flex: 1;
-  position: relative;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .contact-page .overlay {
@@ -942,23 +903,26 @@ h2 {
   font-size: 12px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .contact-page .contact-wrapper {
-      flex-direction: column;
+  .contact-wrapper {
+    flex-direction: column;
+    width: 90%;
   }
 
-  .contact-page .contact-image {
-      height: 300px;
+  .contact-form,
+  .contact-image {
+    width: 100%;
   }
 
-  .contact-page .testimonial {
-      bottom: 10px;
-      left: 10px;
-      max-width: 90%;
+  .contact-image img {
+    max-height: 300px;
+    border-radius: 15px;
+  }
+
+  .input-group {
+    flex-direction: column; /* Stacks input fields on smaller screens */
   }
 }
-
 
 
 
