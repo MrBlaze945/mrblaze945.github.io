@@ -416,10 +416,10 @@ textarea {
   background-color: white;
   border: 3px solid black;
   display: block;
-  margin-bottom: 1rem;
   padding: 0.5rem;
   outline: 0;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .form-input:hover,
@@ -663,8 +663,8 @@ h2 {
 .contact-page .input-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .contact-page .input-field label {
@@ -688,33 +688,61 @@ h2 {
 /* Custom dropdown arrow only for the "Reason for Contacting" field */
 .contact-page .input-field.reason-for-contact {
   position: relative;
+  margin: 0 !important;
+  padding: 0;
+  line-height: 1;
 }
 
-.contact-page .input-field.reason-for-contact select {
-  padding-right: 30px; /* Space for arrow */
+.input-field.reason-for-contact select {
+  appearance: none;
+  width: 100%;
+  padding: 10px;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1rem;
+  background-color: white;
+  line-height: 1;
 }
 
-.contact-page .input-field.reason-for-contact::after {
-  content: "▼"; /* Custom dropdown arrow */
-  position: absolute;
+.input-field.reason-for-contact::after {
+  content: "▼";
+  position: absolute; 
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
   font-size: 0.8rem;
   color: #333;
+  line-height: 1; /* Ensures the arrow doesn't contribute to spacing */
+  height: 0; /* Prevents it from affecting layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Ensure focus and hover match input fields */
-.contact-page .input-field select:hover,
-.contact-page .input-field select:focus {
+.input-field select:hover,
+.input-field select:focus {
   border: 1px solid #dd9535;
   outline: none;
 }
 
+.input-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1.3rem;
+  min-height: 150px; /* Ensures a good default height */
+  background-color: white;
+  resize: none;
+}
+
 .contact-page .input-field input {
   padding: 10px;
-  padding-top: 0px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -772,7 +800,7 @@ h2 {
 }
 
 /* Image Section */
-.contact-page .contact-image {
+.contact-image {
   flex: 1;
   position: relative;
   display: flex;
@@ -964,31 +992,152 @@ h2 {
   }
 }
 
+/* ----------------------------- Contact Page ----------------------------- */
 
+/* ----------------------------- Review Page ----------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.contact-background {
-  background-color: #ffffff;
+.review-layout {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+  justify-content:space-evenly;
 }
 
-/* ----------------------------- Contact Page ----------------------------- */
+/* Featured Image */
+.featured-image {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Overlay on Featured Image */
+.review-page .review-overlay {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  border-radius: 15px;
+}
+
+/* Sidebar Layout */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Social Media Section */
+.review-page .social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
+.review-page .social-media h3 {
+  margin-bottom: 10px;
+}
+
+.review-page .social-media-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+}
+
+.review-page .social-media-icons img {
+  width: 40px;
+  height: auto;
+}
+
+
+/* Latest Articles */
+.latest-articles {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-articles .article-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.latest-articles .article-card img {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.main-layout {
+  margin-top: 20px;
+}
+
+.article-content {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .review-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .social-media {
+    flex-direction: row;
+  }
+
+  .main-layout {
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------- Review Page ----------------------------- */
 
 
 /* MOBILE AND TABLET ONLY (SM AND MD) */
@@ -1093,7 +1242,7 @@ h2 {
   .latest-news,
   .featured-articles,
   .reviews {
-   padding-left: 20px;
+    padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
   }
@@ -1157,7 +1306,7 @@ h2 {
 
   .input-row .form-input {
     flex: 4;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .input-row .submit-button {
