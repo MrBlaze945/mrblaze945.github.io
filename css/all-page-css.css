@@ -1,0 +1,431 @@
+  /* -------------------------------| Font Start |-------------------------------- */
+
+  @font-face {
+  font-family: 'MyCustomFont';
+  src: url('font/font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+  h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+  }
+
+  h2 {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border-bottom: 3px solid #ff2828;
+  display: inline-block;
+  width: 99.5%;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  flex: 1;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  }
+
+  .featured-h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  margin-top: 0px;
+  padding-top: 0px;
+  flex: 1;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+  }
+
+  p {
+  line-height: 1.5;
+  }
+
+  label {
+  font-weight: bold;
+  }
+
+  input, select,textarea {
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1rem;
+  }
+
+  textarea {
+  min-height: 8rem;
+  max-width: 100%;
+  min-width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* -------------------------------| Font End |-------------------------------- */
+
+  /* -------------------------------| Body Start |-------------------------------- */
+
+  * {
+  box-sizing: border-box;
+  }
+
+  html {
+  font-size: 110%;
+  overflow-x: hidden;
+  }
+
+  body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'MyCustomFont', serif;
+  margin: 0;
+  min-width: 100%;
+  }
+
+  .section {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  }
+
+  /* -------------------------------| Body End |-------------------------------- */
+
+  /* ------------------------------| Header Start |------------------------------ */
+
+  .page-header {
+  width: 100vw;
+  max-width: 100%;
+  text-align: center;
+  }
+
+  .page-header-bottom {
+  background-color: #edd2af;
+  }
+
+  /* -------------------------------| Nav Bar Start |-------------------------------- */
+
+  .mobile-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .page-title {
+  text-align: left;
+  }
+
+  .page-title a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  }
+
+  .nav-button {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 50px;
+  padding-right: 20px;
+  }
+
+  .nav-list,
+  .sub-links {
+  list-style: none;
+  padding: 0;
+  }
+
+  .nav-list {
+  margin: 0;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0rem;
+  padding-bottom: 0px;
+  }
+
+  .sub-links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding-bottom: 0px;
+  padding-top: 5px;
+  }
+
+  .nav-list a,
+  .sub-links a {
+  color: black;
+  display: block;
+  font-size: 1.5rem;
+  }
+
+  .nav-list a {
+  font-weight: bold;
+  padding: 1rem 0;
+  text-decoration: none;
+  margin-right: 20px;
+  }
+
+  .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 0.5rem;
+  }
+
+  .social-media img {
+  width: 60px;
+  }
+
+
+
+
+
+
+
+  /* -------------------------------| Nav Bar End |-------------------------------- */
+
+  /* -------------------------------| Header End |-------------------------------- */
+
+
+
+  /* ------------------------------| Footer Start |------------------------------ */
+
+  .list li {
+  margin: 0.25rem 0;
+  }
+
+  .page-footer {
+  width: 100vw;
+  max-width: 100%;
+  }
+
+  .page-footer {
+  background-color: #333;
+  overflow-x: hidden;
+  }
+
+  .footer-row {
+  color: #edd2af;
+  text-align: center;
+  overflow-x: hidden;
+  }
+
+  .footer-list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 0;
+  }
+
+  .footer-list li {
+  margin: 1rem 0;
+  }
+
+  .footer-list a {
+  color: #edd2af;
+  font-size: 1.25rem;
+  font-weight: bold;
+  }
+
+  .copyright {
+  border-top: 2px solid #edd2af;
+  font-size: 1.25rem;
+  padding: 2rem 0 1rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* -------------------------------| Footer End |-------------------------------- */
+
+
+
+  @media (max-width: 479.997px) {
+
+
+
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 799.97px) {
+
+
+
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 999.997px) {
+
+
+
+  } 
+
+  @media screen and (min-width: 1000px) {
+
+  .page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: hidden;
+  }
+
+  /* -------------------------------| Page Header End - Desktop |-------------------------------- */
+
+  .page-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  }
+
+  .page-header-bottom {
+  padding: 0.25rem 0;
+  }
+
+  /* ---------------------------------| Nav Bar Start - Desktop|-------------------------------- */
+
+  .nav-button {
+  display: none;
+  }
+
+  .nav-list {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  }
+
+  .nav-list a:hover {
+  text-decoration: underline;
+  }
+
+  .sub-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .sub-links {
+  margin: 0.5rem 0;
+  }
+
+  .social-media {
+  gap: 2rem;
+  padding: 0;
+  }
+
+  .social-media {
+  order: -1;
+  padding-top: 0.1rem;
+  }
+
+  .sub-links a {
+  font-size: 1.2rem;
+  }
+
+  .sub-links a:hover {
+  color: #333;
+  }
+
+  .social-media img {
+  width: 30px;
+  }
+
+  /* ---------------------------------| Nav Bar End - Desktop|-------------------------------- */
+
+  /* -------------------------------| Page Header End - Desktop|-------------------------------- */
+
+  /* -------------------------------| Page Footer Start - Desktop|-------------------------------- */  
+
+  .footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  overflow-x: hidden;
+  }
+
+  .footer-list,
+  .copyright {
+  flex: 1;
+  }
+
+  .copyright {
+  order: -1;
+  border: 0;
+  padding: 0;
+  }
+
+
+  /* -------------------------------| Page Footer end - Desktop|-------------------------------- */  
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 479.997px) {
+
+  .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  }
+
+
+
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 799.997px) {
+
+
+
+  /* -------------------------------| Nav List - Phone / Tablet Start |-------------------------------- */ 
+
+  .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  }
+
+  /* -------------------------------| Nav List - Phone / Tablet End |-------------------------------- */ 
+
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 999.997px) {
+
+
+
+  } 
+
+  @media screen and (min-width: 1000px) {
+
+
+
+  }
