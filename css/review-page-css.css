@@ -27,7 +27,7 @@
     margin-right: 10px;
     }
 
-    
+
 
     /* Featured Image */
     .featured-image {
@@ -38,12 +38,15 @@
     }
 
     .featured-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 375px;
-        border-radius: 8px;
-        }
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 430px;
+    max-height: 430px;
+    border-radius: 8px;
+    object-fit: cover;
+
+    }
 
     /* Overlay on Featured Image */
     .review-page .review-overlay {
@@ -96,7 +99,7 @@
     .review-page h1 {
     margin-top: 15px;
     margin-bottom: 0px;
-    font-size: clamp(20px, 1.6vw, 30px); /* Responsive font size */
+    font-size: clamp(17.4px, 1.6vw, 30px); /* Responsive font size */
     }
 
     .review-page .author {
@@ -113,6 +116,7 @@
     display: flex;
     align-items: center; /* Prevents unnecessary stretching */
     gap: 10px; /* Reduces space between image and text */
+    border-bottom: 2px solid #eee;
     }
 
     .latest-articles .article-card img {
@@ -127,12 +131,35 @@
 
     .latest-articles .article-card h4 {
     margin: 0;
-    font-size: clamp(8px, 1.9vw, 18px);
     line-height: 1.2;
     display: flex;
     align-items: flex-start; /* Ensures text stays aligned to the top */
     text-align: left; /* Keeps text aligned properly */
     }
+
+    .article-card {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Keeps the text color the same */
+    background-color: #fff; /* Optional: Background color */
+    padding: 8px; /* Adds spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    }
+
+    .article-card:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    }
+
+    .article-text h4 {
+    flex-grow: 1; /* Allows text to expand */
+    min-width: 0; /* Prevents flexbox from shrinking text */
+    white-space: nowrap; /* Keeps text in one line */
+    }
+
 
     /* Main Content */
     .main-layout {
@@ -142,6 +169,7 @@
     .article-content {
     padding: 20px;
     padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -199,7 +227,6 @@
     float: none;
     display: block;
     margin: 10px auto;
-    margin-bottom: 0px;
     width: 100%;
     max-width: 300px;
     }
@@ -246,8 +273,8 @@
     position: relative; /* Ensures .overlay stays within the card */
     flex: 0 0 calc(100% / 2 - 5.3px);
     max-width: calc(100% / 2 - 5.3px);
-    height: 125px; /* Set a fixed height */
-    max-height: 125px; /* Limits height */
+    height: 170px; /* Set a fixed height */
+    max-height: 170px; /* Limits height */
     border-radius: 8px;
     overflow: hidden;
     scroll-snap-align: start;
@@ -293,21 +320,52 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark background for readability */
-    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
     padding: 10px;
     text-align: left;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px; /* Fixed height for consistent overlays */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end; /* Keeps text at the bottom */
     box-sizing: border-box;
-    overflow: hidden; /* Prevents expansion */
+    overflow: hidden; /* Ensures text does not overflow */
     }
 
     .reviews-overlay h3 {
     margin: 0;
     font-size: clamp(8px, 1.4vw, 16px); /* Responsive font size */
+    line-height: 1.3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    white-space: normal; /* Allows wrapping */
+    overflow-wrap: break-word; /* Ensures long words wrap */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    }
+
+
+    .reviews-overlay h4 {
+    margin: 0;
+    font-size: clamp(6px, 1.2vw, 16px); /* Responsive font size */
+    line-height: 1.3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    white-space: normal; /* Allows wrapping */
+    overflow-wrap: break-word; /* Ensures long words wrap */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    }
+
+    .reviews-overlay h5 {
+    margin: 0;
+    font-size: clamp(6px, 1.2vw, 16px); /* Responsive font size */
     line-height: 1.3;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     text-align: left;
@@ -352,83 +410,119 @@
 
     @media screen and (min-width: 0px) and (max-width: 334.997px) {
 
-        /* ----------------------------- | Review Page - Latest Article Cards Start | ----------------------------- */
-    
-        .review-news-card {
-        flex: 0 0 calc(100% / 1 - 7px); /* Ensures exactly 4 articles fit */
-        max-width: calc(100% / 1 - 7px);
-        height: 175px; /* Set a fixed height */
-        max-height: 175px; /* Limits height */
-        border-radius: 8px;
-        overflow: hidden; /* Prevents content from exceeding the height */
-        scroll-snap-align: start;
-        }
-    
-        .review-layout {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        align-items: center;
-        justify-content:space-evenly;
-        }
-    
-    
-        /* ----------------------------- | Review Page - Latest Article Cards End | ----------------------------- */
-    
-        /* ----------------------------- | Review Page - Floating Images Start | ----------------------------- */
-    
-        .float-right {
-        float: center; /* Keep the floating effect for small screens */
-        margin: 0px 0px 0px 20px;
-        min-height: 175px;
-        min-width: 240px;
-        max-height: 175px; /* Adjust image width */
-        max-width: 240px;
-        border-radius: 12px;
-        }
-    
-        .float-left {
-        float: center; /* Keep the floating effect for small screens */
-        margin: 0px 0px 0px 20px;
-        min-height: 175px;
-        min-width: 240px;
-        max-height: 175px; /* Adjust image width */
-        max-width: 240px;
-        border-radius: 12px;
-        }
-    
-        /* ----------------------------- | Review Page - Floating Images End | ----------------------------- */
-    
-        /* ----------------------------- | Review Page - Hidden Items Start | ----------------------------- */
-    
-        .review-social-media {
-        display: none;
-        }
-    
-        .latest-articles-title {
-        display: none;
-        }
-    
-        .latest-articles .article-card {
-        display: none;
-        }
-    
-        .latest-articles .article-card img {
-        display: none;
-        }
-    
-        .latest-articles .article-card h4 {
-        display: none;
-        }
-    
-    
-    
-        /* ----------------------------- | Review Page - Hidden Items End | ----------------------------- */
-    
-        }
+    /* ----------------------------- | Review Page - Font Control Start | ----------------------------- */    
 
-    @media screen and (min-width: 335px) and (max-width: 477.997px) {
+    .review-page h1 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: clamp(16px, 1.3vw, 30px);
+    }
+
+    .reviews-overlay h3 {
+    font-size: clamp(13px, 1.3vw, 30px);
+    }
+
+    .reviews-overlay h4 {
+    font-size: clamp(12px, 1.3vw, 30px);
+    }
+
+    /* ----------------------------- | Review Page - Font Control End | ----------------------------- */   
+
+    /* ----------------------------- | Review Page - Latest Article Cards Start | ----------------------------- */
+
+    .review-news-card {
+    flex: 0 0 calc(100% / 1 - 0px); /* Ensures exactly 4 articles fit */
+    max-width: calc(100% / 1 - 0px);
+    height: 175px; /* Set a fixed height */
+    max-height: 175px; /* Limits height */
+    border-radius: 8px;
+    overflow: hidden; /* Prevents content from exceeding the height */
+    scroll-snap-align: start;
+    }
+
+    .review-layout {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content:space-evenly;
+    }
+
+
+    /* ----------------------------- | Review Page - Latest Article Cards End | ----------------------------- */
+
+    /* ----------------------------- | Review Page - Floating Images Start | ----------------------------- */
+
+    .float-right {
+    align-items: center;
+    float: center; /* Keep the floating effect for small screens */
+    min-height: 175px;
+    min-width: 240px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 240px;
+    border-radius: 12px;
+    }
+
+    .float-left {
+    float: center; /* Keep the floating effect for small screens */
+    min-height: 175px;
+    min-width: 240px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 240px;
+    border-radius: 12px;
+    }
+
+    /* ----------------------------- | Review Page - Floating Images End | ----------------------------- */
+
+    /* ----------------------------- | Review Page - Hidden Items Start | ----------------------------- */
+
+    .review-social-media {
+    display: none;
+    }
+
+    .latest-articles-title {
+    display: none;
+    }
+
+    .latest-articles .article-card {
+    display: none;
+    }
+
+    .latest-articles .article-card img {
+    display: none;
+    }
+
+    .latest-articles .article-card h4 {
+    display: none;
+    }
+
+
+
+    /* ----------------------------- | Review Page - Hidden Items End | ----------------------------- */
+
+    }
+
+    @media screen and (min-width: 335px) and (max-width: 524.997px) {
+
+    /* ----------------------------- | Review Page - Font Control Start | ----------------------------- */    
+
+    .review-page h1 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: clamp(16px, 1.3vw, 30px);
+    }
+
+    .reviews-overlay h3 {
+    font-size: clamp(15px, 1.3vw, 30px);
+    }
+
+    .reviews-overlay h4 {
+    font-size: clamp(13px, 1.3vw, 30px);
+    }
+
+    /* ----------------------------- | Review Page - Font Control End | ----------------------------- */    
+
 
     /* ----------------------------- | Review Page - Latest Article Cards Start | ----------------------------- */
 
@@ -506,7 +600,20 @@
 
     }
 
-    @media screen and (min-width: 480px) and (max-width: 799.97px) {
+    @media screen and (min-width: 525px) and (max-width: 799.97px) {
+
+    /* ----------------------------- | Review Page - Font Control Start | ----------------------------- */    
+
+
+    .reviews-overlay h3 {
+    font-size: clamp(10.5px, 1.2vw, 30px);
+    }
+
+    .reviews-overlay h4 {
+    font-size: clamp(10.5px, 1.4vw, 30px);
+    }
+
+    /* ----------------------------- | Review Page - Font Control End | ----------------------------- */    
 
 
     .review-layout {
@@ -569,11 +676,20 @@
 
     @media screen and (min-width: 800px) and (max-width: 999.997px) {
 
+    /* ----------------------------- | Review Page - Latest Article Size Start | ----------------------------- */
 
+    .article-card h4 {
+    font-size: clamp(12px, 1.4vw, 15px);
+    display: block;
+    }
 
+    .article-card h5 {
+    font-size: clamp(12px, 1.4vw, 14px);
+    display: block;
+    margin: 0px;
+    }
 
-
-
+    /* ----------------------------- | Review Page - Latest Article Size End | ----------------------------- */
 
     /* ----------------------------- | Review Page - Floating Images Start | ----------------------------- */
 
@@ -627,9 +743,21 @@
 
 
 
+    /* ----------------------------- | Review Page - Latest Article Size Start | ----------------------------- */
 
+    .article-card h4 {
+    font-size: clamp(7px, 1.90vw, 15px);
+    display: block;
+    }
 
+    .article-card h5 {
+    font-size: clamp(10px, 1.4vw, 14px);
+    display: block;
+    margin: 0px;
+    font-weight: 100;
+    }
 
+    /* ----------------------------- | Review Page - Latest Article Size End | ----------------------------- */
 
     /* ----------------------------- | Review Page - Floating Images Start | ----------------------------- */
 

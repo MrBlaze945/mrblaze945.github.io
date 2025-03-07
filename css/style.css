@@ -11,7 +11,7 @@ padding-bottom: 10px;
 }
 
 .news-card {
-position: relative; /* Ensures .overlay stays within the card */
+position: relative;
 flex: 0 0 calc(100% / 2 - 5.3px);
 max-width: calc(100% / 2 - 5.3px);
 height: 250px; /* Set a fixed height */
@@ -223,35 +223,61 @@ border-bottom: 3px solid #e6007e;
 display: flex;
 flex-direction: column;
 gap: 20px;
-max-width: 100%;
 margin: 0 auto;
 overflow-x: hidden;
 }
 
 .article {
-background: white;
-padding: 15px;
-border-bottom: 1px solid #eee;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-position: relative;
-max-width: 100%;
-overflow-x: hidden;
+  display: flex;
+  justify-content: space-between; /* Pushes metadata to the right */
+  align-items: center; /* Keeps everything aligned vertically */
+  width: 100%;
+  gap: 10px; /* Prevents text from touching the metadata */
+  padding: 15px;
+  padding-left: 0px;
+  border-bottom: 2px solid #eee;
+}
+
+.articles a {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between image and text */
+  text-decoration: none; /* Remove default link styling */
+  color: inherit; /* Keep text color unchanged */
+  padding: 12px; /* Adds spacing */
+  border-bottom: 2px solid #eee; /* Separate articles */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.articles a:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.article h3 {
+  flex-grow: 1; /* Allows title to take up as much space as needed */
 }
 
 .article img {
-width: 120px;
+width: 150px;
+height: 100px;
 object-fit: cover;
 border-radius: 5px;
 }
 
+.metadata {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end; /* Pushes metadata to the right */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
 .category {
-font-size: 14px;
-font-weight: bold;
-color: #e6007e;
-display: block;
+  font-weight: bold;
+  color: #e6007e;
+  margin-left: auto; /* Pushes category to the right */
+  padding-left: 15px;
 }
 
 /* -------------------------------| Front Page - Tabs Section End |-------------------------------- */ 
