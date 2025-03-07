@@ -1,11 +1,18 @@
   /* -------------------------------| Font Start |-------------------------------- */
 
   @font-face {
-  font-family: 'MyCustomFont';
-  src: url('font/font.woff2') format('woff2');
+  font-family: 'MainFont';
+  src: url('font/mainfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   }
+
+  @font-face {
+    font-family: 'ReviewFont';
+    src: url('font/reviewfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
 
   h1, h2, h3 {
   text-transform: uppercase;
@@ -88,7 +95,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'MyCustomFont', serif;
+  font-family: 'MainFont', serif;
   margin: 0;
   min-width: 100%;
   }

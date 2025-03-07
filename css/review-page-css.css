@@ -27,9 +27,10 @@
     margin-right: 10px;
     }
 
+    
+
     /* Featured Image */
     .featured-image {
-    outline: 4px solid red;
     width: 100%;
     position: relative;
     margin-top: 20px;
@@ -37,12 +38,12 @@
     }
 
     .featured-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-    border-radius: 8px;
-    }
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 375px;
+        border-radius: 8px;
+        }
 
     /* Overlay on Featured Image */
     .review-page .review-overlay {
@@ -122,7 +123,6 @@
     flex-shrink: 0; /* Prevents image from shrinking */
     margin-top: 5px;
     margin-bottom: 5px;
-    outline: 3px solid red;
     }
 
     .latest-articles .article-card h4 {
@@ -141,16 +141,18 @@
 
     .article-content {
     padding: 20px;
-    padding-top: 0px;
+    padding-top: 5px;
     margin-bottom: 20px;
     background: #f9f9f9;
     border-radius: 8px;
     }
 
     .article-content p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     text-align: justify;
+    font-family: 'ReviewFont', serif;
+    font-weight: 700;
     }
 
     .review-social-media {
@@ -341,172 +343,6 @@
 
     /* ----------------------------- Review Page End ----------------------------- */
 
-    /* ----------------------------- Review Page ----------------------------- */
-
-
-    .review-page .page-wrapper {
-    flex: 1;
-    }
-
-    .review-layout {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    align-items: center;
-    justify-content:space-evenly;
-    }
-
-    /* Featured Image */
-    .featured-image {
-    outline: 4px solid red;
-    width: 100%;
-    position: relative;
-    margin-top: 20px;
-    border-radius: 15px;
-    }
-
-    .featured-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 375px;
-    border-radius: 8px;
-    }
-
-    /* Overlay on Featured Image */
-    .review-page .review-overlay {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: left;
-    padding: 15px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    border-radius: 15px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    justify-content: center;
-    }
-
-    /* Sidebar Layout */
-    .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    }
-
-    /* Social Media Section */
-    .review-page .social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-    }
-
-    .review-page .social-media h3 {
-    margin-bottom: 10px;
-    }
-
-    .review-page .social-media-icons {
-    display: flex;
-    gap: 10px;
-    justify-content: left;
-    }
-
-    .review-page .social-media-icons img {
-    width: 40px;
-    height: auto;
-    }
-
-    .review-page .author {
-    margin-top: 0px;
-    }
-
-    .review-page h1 {
-    margin-bottom: 0px;
-    }
-
-
-    /* Latest Articles */
-    .latest-articles {
-    display: flex;
-    flex-direction: column;
-    }
-
-    .latest-articles .article-card {
-    display: flex;
-    align-items: center; /* Prevents unnecessary stretching */
-    gap: 10px; /* Reduces space between image and text */
-    }
-
-    .latest-articles .article-card img {
-    width: 120px; /* Set fixed width */
-    height: 70px; /* Set fixed height */
-    object-fit: cover;
-    border-radius: 2px;
-    flex-shrink: 0; /* Prevents image from shrinking */
-    margin-top: 5px;
-    margin-bottom: 5px;
-    outline: 3px solid red;
-    }
-
-    .latest-articles .article-card h4 {
-    margin: 0;
-    font-size: clamp(8px, 1.9vw, 18px);
-    line-height: 1.2;
-    display: flex;
-    align-items: flex-start; /* Ensures text stays aligned to the top */
-    text-align: left; /* Keeps text aligned properly */
-    }
-
-    /* Main Content */
-    .main-layout {
-    margin-top: 20px;
-    }
-
-    .article-content {
-    padding: 20px;
-    margin-bottom: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    }
-
-    .article-content p {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
-    }
-
-    /* Floating Images for Wikipedia-style layout */
-    .float-right {
-    float: right;
-    margin: 0 0 10px 15px;
-    max-width: 50%; /* Adjust to make it more responsive */
-    display: inline; /* Ensures text wraps around it */
-    }
-
-    .float-left {
-    float: left;
-    margin: 0 15px 10px 0;
-    max-width: 50%;
-    display: inline;
-    }
-
-    /* Ensure paragraphs wrap around images properly */
-    p {
-    text-align: justify;
-    }
-
-    /* Style images to fit within the page’s aesthetic */
-    .main-layout img {
-    border: 1px solid #ccc;
-    padding: 5px;
-    background: #f9f9f9;
-    }
 
     /* ----------------------------- Review Page - Hidden Items Start ----------------------------- */
 
@@ -514,7 +350,85 @@
 
     /* ----------------------------- Review Page - Hidden Items Start ----------------------------- */
 
-    @media screen and (min-width: 0px) and (max-width: 497.997px) {
+    @media screen and (min-width: 0px) and (max-width: 334.997px) {
+
+        /* ----------------------------- | Review Page - Latest Article Cards Start | ----------------------------- */
+    
+        .review-news-card {
+        flex: 0 0 calc(100% / 1 - 7px); /* Ensures exactly 4 articles fit */
+        max-width: calc(100% / 1 - 7px);
+        height: 175px; /* Set a fixed height */
+        max-height: 175px; /* Limits height */
+        border-radius: 8px;
+        overflow: hidden; /* Prevents content from exceeding the height */
+        scroll-snap-align: start;
+        }
+    
+        .review-layout {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: center;
+        justify-content:space-evenly;
+        }
+    
+    
+        /* ----------------------------- | Review Page - Latest Article Cards End | ----------------------------- */
+    
+        /* ----------------------------- | Review Page - Floating Images Start | ----------------------------- */
+    
+        .float-right {
+        float: center; /* Keep the floating effect for small screens */
+        margin: 0px 0px 0px 20px;
+        min-height: 175px;
+        min-width: 240px;
+        max-height: 175px; /* Adjust image width */
+        max-width: 240px;
+        border-radius: 12px;
+        }
+    
+        .float-left {
+        float: center; /* Keep the floating effect for small screens */
+        margin: 0px 0px 0px 20px;
+        min-height: 175px;
+        min-width: 240px;
+        max-height: 175px; /* Adjust image width */
+        max-width: 240px;
+        border-radius: 12px;
+        }
+    
+        /* ----------------------------- | Review Page - Floating Images End | ----------------------------- */
+    
+        /* ----------------------------- | Review Page - Hidden Items Start | ----------------------------- */
+    
+        .review-social-media {
+        display: none;
+        }
+    
+        .latest-articles-title {
+        display: none;
+        }
+    
+        .latest-articles .article-card {
+        display: none;
+        }
+    
+        .latest-articles .article-card img {
+        display: none;
+        }
+    
+        .latest-articles .article-card h4 {
+        display: none;
+        }
+    
+    
+    
+        /* ----------------------------- | Review Page - Hidden Items End | ----------------------------- */
+    
+        }
+
+    @media screen and (min-width: 335px) and (max-width: 477.997px) {
 
     /* ----------------------------- | Review Page - Latest Article Cards Start | ----------------------------- */
 
@@ -545,18 +459,20 @@
     .float-right {
     float: right; /* Keep the floating effect for small screens */
     margin: 0px 0px 0px 15px;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 175px;
+    min-width: 240px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 240px;
     border-radius: 12px;
     }
 
     .float-left {
     float: left; /* Keep the floating effect for small screens */
     margin: 0px 15px 0px 0px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 175px;
+    min-width: 240px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 240px;
     border-radius: 12px;
     }
 
@@ -610,18 +526,20 @@
     .float-right {
     float: right; /* Keep the floating effect for small screens */
     margin: 0px 0px 0px 15px;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 175px;
+    min-width: 280px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 280px;
     border-radius: 12px;
     }
 
     .float-left {
     float: left; /* Keep the floating effect for small screens */
     margin: 0px 15px 0px 0px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 175px;
+    min-width: 280px;
+    max-height: 175px; /* Adjust image width */
+    max-width: 280px;
     border-radius: 12px;
     }
 
@@ -662,18 +580,20 @@
     .float-right {
     float: right; /* Keep the floating effect for small screens */
     margin: 0px 0px 0px 15px;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 180px;
+    min-width: 280px;
+    max-height: 180px; /* Adjust image width */
+    max-width: 280px;
     border-radius: 12px;
     }
 
     .float-left {
     float: left; /* Keep the floating effect for small screens */
     margin: 0px 15px 0px 0px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 180px;
+    min-width: 280px;
+    max-height: 180px; /* Adjust image width */
+    max-width: 280px;
     border-radius: 12px;
     }
 
@@ -716,18 +636,20 @@
     .float-right {
     float: right; /* Keep the floating effect for small screens */
     margin: 0px 0px 0px 15px;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 200px;
+    min-width: 300px;
+    max-height: 200px; /* Adjust image width */
+    max-width: 300px;
     border-radius: 12px;
     }
 
     .float-left {
     float: left; /* Keep the floating effect for small screens */
     margin: 0px 15px 0px 0px;
-    max-width: 175px; /* Adjust image width */
-    max-height: 175px;
+    min-height: 200px;
+    min-width: 300px;
+    max-height: 200px; /* Adjust image width */
+    max-width: 300px;
     border-radius: 12px;
     }
 

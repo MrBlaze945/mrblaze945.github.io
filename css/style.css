@@ -280,7 +280,25 @@ padding-right: 20px;
 
 
 
+@media screen and (min-width: 0px) and (max-width: 349.997px) {
 
+/* -------------------------------| Front Page - Hidden Aspect Start |-------------------------------- */
+
+.category {
+  display: none;
+  }
+  
+  .metadata-item {
+    display: none;
+  }
+
+  .article img {
+    display: none;
+  }
+  
+  /* -------------------------------| Front Page - Hidden Aspect End |-------------------------------- */
+
+}
 
 @media screen and (min-width: 0px) and (max-width: 399.997px) {
 
@@ -375,7 +393,7 @@ overflow: hidden; /* Ensures text does not overflow */
 /* Make H3 text behave like H4 */
 .overlay h3 {
 margin: 0;
-font-size: clamp(12px, 1.9vw, 25px); /* Ensures text scales */
+font-size: clamp(11px, 1.9vw, 25px); /* Ensures text scales */
 line-height: 1.2;
 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 text-align: left;
@@ -388,7 +406,7 @@ display: block;
 
 .overlay h4 {
 margin: 0;
-font-size: clamp(12px, 1.9vw, 25px); /* Ensures text scales */
+font-size: clamp(9px, 1.9vw, 25px); /* Ensures text scales */
 line-height: 1.2;
 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 text-align: left;
