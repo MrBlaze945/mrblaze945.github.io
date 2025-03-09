@@ -520,8 +520,8 @@ display: none;
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5px);
-max-width: calc(100% / 1 - 5px);
+flex: 0 0 calc(100% / 1 - 0px);
+max-width: calc(100% / 1 - 0px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
@@ -531,8 +531,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5px);
-max-width: calc(100% / 1 - 5px);
+flex: 0 0 calc(100% / 1 - 0px);
+max-width: calc(100% / 1 - 0px);
 height: 200px; /* Set a fixed height */
 max-height: 200px; /* Limits height */
 border-radius: 8px;
@@ -948,8 +948,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 3 - 5px);
-max-width: calc(100% / 3 - 5px);
+flex: 0 0 calc(100% / 3 - 6.5px);
+max-width: calc(100% / 3 - 6.5px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
