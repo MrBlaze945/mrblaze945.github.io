@@ -22,6 +22,10 @@
   margin-bottom: 0.5rem;
 }
 
+.input-field textarea {
+  margin-bottom: 0px;
+}
+
 
 /* ----------------------------- Form End ----------------------------- */
 
@@ -31,7 +35,6 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  align-items: center;
   min-height: 100vh;
   background-color: #f5f5f5;
 }
@@ -40,9 +43,8 @@
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   min-height: auto;
   background: white;
@@ -50,8 +52,9 @@
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: 50px;
-  margin-top: 10px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .contact-page .contact-heading {
@@ -266,6 +269,7 @@
 .contact-page .contact-heading {
   font-size: 24px;
   font-weight: bold;
+  text-align: center
 }
 
 .contact-page .contact-subtext {
@@ -392,15 +396,81 @@
   text-decoration: none;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 377px) {
+    .contact-wrapper {
+      width: 95%;
+      max-width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-form {
+      width: 100% !important; /* Force it to stay inside */
+      max-width: 100% !important; /* Prevent it from growing larger */
+      min-width: auto !important; /* Remove any forced min-width */
+      padding: 10px; /* Adjust padding */
+      box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+      margin: 0 auto; /* Center it */
+      flex-shrink: 1; /* Ensure it shrinks if needed */
+    }
+  
+    .contact-page .input-group {
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .contact-page .input-field {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .contact-page .input-field input,
+    .contact-page .input-field textarea,
+    .contact-page .input-field select,
+    .contact-page .contact-btn {
+      max-width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+      box-sizing: border-box;
+    }
+  
+    .contact-page .contact-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .contact-image {
+      display: none;
+    }
+  }
+
+@media (max-width: 780px) {
   .contact-wrapper {
     flex-direction: column;
     width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
   }
 
   .contact-form,
   .contact-image {
     width: 100%;
+    margin: auto;
   }
 
   .contact-image img {
@@ -414,5 +484,3 @@
 }
 
 /* ----------------------------- Contact Page End ----------------------------- */
-
-  

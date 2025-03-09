@@ -280,6 +280,47 @@ border-radius: 5px;
   padding-left: 15px;
 }
 
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none; /* Prevents blocking interactions */
+}
+
+.scroll-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 10px;
+  width: 50px; /* Makes it square */
+  height: 50px; /* Makes it square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-buttons img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.scroll-buttons img:hover {
+  opacity: 1;
+}
+
 /* -------------------------------| Front Page - Tabs Section End |-------------------------------- */ 
 
 /* MOBILE AND TABLET ONLY (SM AND MD) */
@@ -332,8 +373,8 @@ padding-right: 20px;
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5.3px);
-max-width: calc(100% / 1 - 5.3px);
+flex: 0 0 calc(100% / 1 - 0px);
+max-width: calc(100% / 1 - 0px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
@@ -343,8 +384,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5.3px);
-max-width: calc(100% / 1 - 5.3px);
+flex: 0 0 calc(100% / 1 - 0px);
+max-width: calc(100% / 1 - 0px);
 height: 200px; /* Set a fixed height */
 max-height: 200px; /* Limits height */
 border-radius: 8px;
