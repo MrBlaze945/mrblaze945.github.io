@@ -1,0 +1,486 @@
+/* ----------------------------- Form Start ----------------------------- */
+
+.form-input {
+  background-color: white;
+  border: 3px solid black;
+  display: block;
+  padding: 0.5rem;
+  outline: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-input:hover, .form-input:focus {
+  border: 3px solid #dd9535;
+}
+
+.input-row .form-input {
+  margin-bottom: 0.5rem;
+}
+
+.input-row .form-input {
+  margin-bottom: 0.5rem;
+}
+
+.input-field textarea {
+  margin-bottom: 0px;
+}
+
+
+/* ----------------------------- Form End ----------------------------- */
+
+/* ----------------------------- Contact Page ----------------------------- */
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  min-height: auto;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-page .contact-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-page .contact-subtext {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.contact-page .input-group {
+  display: flex;
+  gap: 5px;
+}
+
+.contact-page .input-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact-page .input-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the select field to match the input fields */
+.contact-page .input-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none; /* Removes default styling on some browsers */
+  cursor: pointer;
+}
+
+/* Custom dropdown arrow only for the "Reason for Contacting" field */
+.contact-page .input-field.reason-for-contact {
+  position: relative;
+  margin: 0 !important;
+  padding: 0;
+  line-height: 1;
+}
+
+.input-field.reason-for-contact select {
+  appearance: none;
+  width: 100%;
+  padding: 10px;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1rem;
+  background-color: white;
+  line-height: 1;
+}
+
+.input-field.reason-for-contact::after {
+  content: "▼";
+  position: absolute; 
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1; /* Ensures the arrow doesn't contribute to spacing */
+  height: 0; /* Prevents it from affecting layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure focus and hover match input fields */
+.input-field select:hover,
+.input-field select:focus {
+  border: 1px solid #dd9535;
+  outline: none;
+}
+
+.input-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'EB Garamond', "Georgia", serif;
+  font-size: 1.3rem;
+  min-height: 150px; /* Ensures a good default height */
+  background-color: white;
+  resize: none;
+}
+
+.contact-page .input-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-page .contact-options {
+  margin: 20px 0;
+}
+
+.contact-page .contact-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-page .option-btn {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.contact-page .option-btn:hover {
+  border-color: black;
+}
+
+.contact-page .option-btn i {
+  font-size: 18px;
+}
+
+.contact-page .option-btn span {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.contact-page .contact-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-page .contact-btn:hover {
+  background: #333;
+}
+
+/* Image Section */
+.contact-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-page .contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.contact-image {
+  height: 750px;
+}
+
+.contact-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.contact-page .testimonial {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  max-width: 80%;
+}
+
+.contact-page .testimonial-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-page .testimonial-author {
+  font-size: 12px;
+}
+
+/* Contact Form Section */
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+}
+
+.contact-page .contact-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center
+}
+
+.contact-page .contact-subtext {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures elements wrap instead of overflowing */
+}
+
+.input-field {
+  flex: 1; /* Makes both input fields share space evenly */
+  min-width: 100px; /* Prevents the inputs from getting too small */
+}
+
+.contact-page .input-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group .input-field input {
+  width: 100%; /* Ensures inputs take full width of their container */
+}
+
+.contact-page .contact-options {
+  margin: 20px 0;
+}
+
+.contact-page .contact-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-page .option-btn {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.contact-page .option-btn:hover {
+  border-color: black;
+}
+
+.contact-page .option-btn i {
+  font-size: 18px;
+}
+
+.contact-page .option-btn span {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.contact-page .contact-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-page .contact-btn:hover {
+  background: #333;
+}
+
+/* Image Section */
+.contact-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.contact-page .testimonial {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  max-width: 80%;
+}
+
+.contact-page .testimonial-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-page .testimonial-author {
+  font-size: 12px;
+}
+
+.button {
+  background-color: #ffffff00;
+  border: 3px solid black;
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  }
+
+  @media (max-width: 377px) {
+    .contact-wrapper {
+      width: 95%;
+      max-width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-form {
+      width: 100% !important; /* Force it to stay inside */
+      max-width: 100% !important; /* Prevent it from growing larger */
+      min-width: auto !important; /* Remove any forced min-width */
+      padding: 10px; /* Adjust padding */
+      box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+      margin: 0 auto; /* Center it */
+      flex-shrink: 1; /* Ensure it shrinks if needed */
+    }
+  
+    .contact-page .input-group {
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .contact-page .input-field {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .contact-page .input-field input,
+    .contact-page .input-field textarea,
+    .contact-page .input-field select,
+    .contact-page .contact-btn {
+      max-width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+      box-sizing: border-box;
+    }
+  
+    .contact-page .contact-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .contact-image {
+      display: none;
+    }
+  }
+
+@media (max-width: 780px) {
+  .contact-wrapper {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
+  }
+
+  .contact-form,
+  .contact-image {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contact-image img {
+    max-height: 300px;
+    border-radius: 15px;
+  }
+
+  .input-group {
+    flex-direction: column; /* Stacks input fields on smaller screens */
+  }
+}
+
+/* ----------------------------- Contact Page End ----------------------------- */
