@@ -520,8 +520,8 @@ display: none;
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5.3px);
-max-width: calc(100% / 1 - 5.3px);
+flex: 0 0 calc(100% / 1 - 5px);
+max-width: calc(100% / 1 - 5px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
@@ -531,8 +531,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 1 - 5.3px);
-max-width: calc(100% / 1 - 5.3px);
+flex: 0 0 calc(100% / 1 - 5px);
+max-width: calc(100% / 1 - 5px);
 height: 200px; /* Set a fixed height */
 max-height: 200px; /* Limits height */
 border-radius: 8px;
@@ -667,8 +667,8 @@ display: none;
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 2 - 5.3px);
-max-width: calc(100% / 2 - 5.3px);
+flex: 0 0 calc(100% / 2 - 5px);
+max-width: calc(100% / 2 - 5px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
@@ -678,8 +678,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 2 - 5.3px);
-max-width: calc(100% / 2 - 5.3px);
+flex: 0 0 calc(100% / 2 - 5px);
+max-width: calc(100% / 2 - 5px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
@@ -802,8 +802,8 @@ white-space: nowrap; /* Prevent text from breaking into multiple lines */
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 2 - 5.3px);
-max-width: calc(100% / 2 - 5.3px);
+flex: 0 0 calc(100% / 2 - 5px);
+max-width: calc(100% / 2 - 5px);
 height: 270px; /* Set a fixed height */
 max-height: 270px; /* Limits height */
 border-radius: 8px;
@@ -813,8 +813,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 2 - 5.3px);
-max-width: calc(100% / 2 - 5.3px);
+flex: 0 0 calc(100% / 2 - 5px);
+max-width: calc(100% / 2 - 5px);
 height: 200px; /* Set a fixed height */
 max-height: 200px; /* Limits height */
 border-radius: 8px;
@@ -937,8 +937,8 @@ white-space: nowrap; /* Prevent text from breaking into multiple lines */
 
 .featured-news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 2 - 5.3px);
-max-width: calc(100% / 2 - 5.3px);
+flex: 0 0 calc(100% / 2 - 5px);
+max-width: calc(100% / 2 - 5px);
 height: 310px; /* Set a fixed height */
 max-height: 310px; /* Limits height */
 border-radius: 8px;
@@ -948,8 +948,8 @@ scroll-snap-align: start;
 
 .news-card {
 position: relative; /* Ensures .overlay stays within the card */
-flex: 0 0 calc(100% / 3 - 5.3px);
-max-width: calc(100% / 3 - 5.3px);
+flex: 0 0 calc(100% / 3 - 5px);
+max-width: calc(100% / 3 - 5px);
 height: 250px; /* Set a fixed height */
 max-height: 250px; /* Limits height */
 border-radius: 8px;
