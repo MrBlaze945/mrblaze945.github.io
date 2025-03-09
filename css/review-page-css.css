@@ -438,39 +438,40 @@ margin-right: 7.5px;
 /* ----------------------------- Scroll Buttons Start ----------------------------- */
 
 .review-scroll-buttons {
-position: absolute;
-top: 50%;
-width: 100%;
-display: flex;
-justify-content: space-between;
-transform: translateY(-50%);
-z-index: 10;
-pointer-events: none; /* Prevents blocking interactions */
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 50; /* Ensures buttons are on top visually */
+    pointer-events: none; /* Prevents buttons from blocking other elements */
 }
 
 .review-scroll-buttons button {
-background: rgba(0, 0, 0, 0.5);
-border: none;
-cursor: pointer;
-pointer-events: auto;
-padding: 10px;
-width: 50px; /* Makes it square */
-height: 50px; /* Makes it square */
-display: flex;
-align-items: center;
-justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Allows clicking the buttons */
 }
 
 .review-scroll-buttons img {
-width: 30px;
-height: 30px;
-opacity: 0.8;
-transition: opacity 0.2s ease-in-out;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .review-scroll-buttons img:hover {
-opacity: 1;
+    opacity: 1;
 }
+
 
 /* ----------------------------- Scroll Buttons Start ----------------------------- */
 
