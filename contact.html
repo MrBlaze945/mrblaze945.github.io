@@ -13,19 +13,30 @@
 
 <body class="contact-page">
   <header class="page-header">
-    <div class="page-wrapper page-header-top">
-      <div class="mobile-top-row">
-        <h1 class="page-title"><a href="index.html">Testing</a></h1>
-        <img src="images/nav-button.png" alt="" class="nav-button" id="nav-button">
-      </div>
-      <nav class="hide-on-mobile" id="main-nav">
-        <ul class="nav-list">
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Tours</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
+    <div class="header-container">
+        <h1 class="page-title"><a href="index.html">8Bit Opinions</a></h1>
+
+        <!-- Standard Navigation for Desktop -->
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="index.html">Articles</a></li>
+                <li><a href="our-team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <img src="images/Nav Bar/Nav.png" alt="Menu" class="nav-button" id="nav-button">
+    </div>
+
+    <!-- Mobile Dropdown Menu (Initially Hidden) -->
+    <div class="mobile-dropdown" id="mobile-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
         </ul>
-      </nav>
     </div>
   </header>
   
@@ -86,20 +97,27 @@
       </div>
   </div>
 
-  <footer class="page-footer">
-    <div class="page-wrapper footer-row">
-      <ul class="footer-list">
-        <li><a href="#">Terms and Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookies Policy</a></li>
-        <li><a href="#">Drinks Aware</a></li>
-      </ul>
-      <ul class="footer-list">
-        <li><a href="#">Find Us</a></li>
-        <li><a href="#">01314 773435</a></li>
-        <li><a href="#">enquiries@Testing.com</a></li>
-      </ul>
-      <div class="copyright">Testing &copy;2023<br>All Rights Reserved</div>
+  <footer>
+    <div class="footer-container">
+        <!-- Social Media Icons with Images -->
+        <div class="social-icons">
+            <a href="#"><img src="images/Social Media Icons/Facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/Social Media Icons/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/Social Media Icons/Twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/Social Media Icons/Google.png" alt="Google"></a>
+            <a href="#"><img src="images/Social Media Icons/Youtube.png" alt="YouTube"></a>
+        </div>
+  
+        <!-- Footer Navigation Links -->
+        <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Articles</a></li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+  
+        <!-- Copyright Information -->
+        <p class="copyright">Copyright &copy;2025; Designed by <span>Nathan</span></p>
     </div>
   </footer>
 

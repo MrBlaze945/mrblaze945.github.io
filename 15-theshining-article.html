@@ -10,28 +10,33 @@
   <script src="js/mobile-nav.js" defer></script>
 </head>
 <body>
+  
   <header class="page-header">
-    <div class="page-wrapper page-header-top">
-      <div class="mobile-top-row">
-       <h1 class="page-title"><a href="index.html">GLENCARRON</a></h1>
+    <div class="header-container">
+        <h1 class="page-title"><a href="index.html">8Bit Opinions</a></h1>
 
-       <img
-          src="images/nav-button.png"
-          alt=""
-          class="nav-button"
-          id="nav-button"
-        >
-      </div>
+        <!-- Standard Navigation for Desktop -->
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="index.html">Articles</a></li>
+                <li><a href="our-team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
 
-     <nav class="hide-on-mobile" id="main-nav">
-       <ul class="nav-list">
-         <li><a href="#">Shop</a></li>
-         <li><a href="tours.html">Tours</a></li>
-         <li><a href="news.html">News</a></li>
-         <li><a href="#">Contact</a></li>
+        <!-- Mobile Menu Button -->
+        <img src="images/Nav Bar/Nav.png" alt="Menu" class="nav-button" id="nav-button">
+    </div>
+
+    <!-- Mobile Dropdown Menu (Initially Hidden) -->
+    <div class="mobile-dropdown" id="mobile-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
         </ul>
-     </nav>
-   </div>
+    </div>
   </header>
 
   <div class="review-page">
@@ -43,9 +48,10 @@
   
           <!-- Featured Image Section -->
           <section class="featured-image">
-            <img src="images/Phone Images/beemovie.jpg" alt="Bee Movie Poster">
+            <img src="images/article-images/15-theshining-pictures/Banner.jpg" alt="Bee Movie Poster">
             <div class="review-overlay">
-              <h1>Why the Bee Movie is a Masterpiece!</h1>
+              <h1>Rewatching The Shining:</h1>
+              <h2>Is It Still the Scariest Film Ever?</h2>
               <p class="author">Author: Nathan Doogan</p>
             </div>
           </section>
@@ -65,10 +71,21 @@
             </div>
   
             <!-- Latest Articles -->
+            <div class="scroll-container">  
+              <div class="review-scroll-buttons">
+                <button class="review-scroll-left">
+                    <img src="images/Nav Bar/left-white.png" alt="Scroll Left">
+               </button>
+                <button class="review-scroll-right">
+                    <img src="images/Nav Bar/right-white.png" alt="Scroll Right">
+               </button>
+            </div>
+
             <div class="latest-articles">
               <h3 class="latest-articles-title">Latest Articles</h3>
 
               <div class="review-news-grid">
+                
                 <div class="review-news-card">
                   <a href="1-eldenring-article.html" class="review-hypertext"></a>
                   <img src="images/Phone Images/Elden Ring.jpg" alt="Picture of Elden Ring Poster">
@@ -136,62 +153,56 @@
         <main class="article-content">
           <article>
 
-            <!-- Floating Image on the Right -->
-            
-            <p><strong>A</strong>ccording to all known laws of aviation, there is no way a bee should be able to fly...</p>
-
-            <!-- Floating Image on the Left -->
-
-            
-            <p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat
-              little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible. Yellow,
-              black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Let's shake it up a little. Barry! Breakfast is ready! 
-              <img src="images/Phone Images/beemoviefloatright.jpg" alt="Bee Movie Scene" class="float-right">
-              Coming! Hang on a second. Hello? - Barry? - Adam? - Can you believe this is happening? - I can't. I'll pick you up. Looking sharp. 
-              Use the stairs. Your father paid good money for those. Sorry. I'm excited. Here's the graduate.
-              We're very proud of you, son. A perfect report card, all B's. Very proud. Ma! I got a thing going here. - You got lint on your fuzz.
-              - Ow! That's me!<br><br>- Wave to us! We'll be in row 118,000. - Bye! Barry, I told you, stop flying in the house! - Hey, Adam. - Hey, Barry.
-              - Is that fuzz gel? - A little. Special day, graduation. Never thought I'd make it. Three days grade school, three days high school. 
-              Those were awkward. Three days college. I'm glad I took a day and hitchhiked around the hive. You did come back different. - Hi, Barry. 
-              - Artie, growing a mustache? </p>
-
-            <p>Looks good. - Hear about Frankie? - Yeah. - You going to the funeral? - No, I'm not going. Everybody knows, sting someone, you die. 
-              Don't waste it on a squirrel. Such a hothead. I guess he could have just gotten out of the way. I love this incorporating an amusement 
-              park into our day. That's why we don't need vacations. Boy, quite a bit of pomp... under the circumstances. - Well, Adam, today we are men. 
-              - We are! - Bee-men. - Amen! Hallelujah! Students, faculty, distinguished bees, please welcome Dean Buzzwell. Welcome, New Hive City 
-              graduating class of... ...9:15. That concludes our ceremonies. And begins your career at Honex Industries! Will we pick our job today? 
-              I heard it's just orientation. Heads up! Here we go. Keep your hands and antennas inside the tram at all times. - Wonder what it'll be like? 
-              - A little scary. Welcome to Honex, a division of Honesco and a part of the Hexagon Group. This is it!</p>
-
-            <p>Wow. Wow. We know that you, as a bee, have worked your whole life to get to the point where you can work for your whole life. 
-              Honey begins when our valiant Pollen Jocks bring the nectar to the hive. Our top-secret formula is automatically color-corrected, 
-              scent-adjusted and bubble-contoured into this soothing sweet syrup with its distinctive golden glow you know as... Honey! - 
-              That girl was hot. - She's my cousin! - She is? - Yes, we're all cousins. - Right. You're right. </p>
-
-            <p>At Honex, we constantly strive to improve every aspect of bee existence. These bees are stress-testing a new helmet technology. 
-              - What do you think he makes? - Not enough. Here we have our latest advancement, the Krelman. - What does that do? - Catches that 
-              little strand of honey that hangs after you pour it. Saves us millions. Can anyone work on the Krelman? Of course. Most bee jobs 
-              are small ones. But bees know that every small job, if it's done well, means a lot.</p>
-
-            <p>But choose carefully because you'll stay in the job you pick for the rest of your life. The same job the rest of your life? 
-              I didn't know that. What's the difference? You'll be happy to know that bees, as a species, haven't had one day off in 27 million years. 
-              So you'll just work us to death? We'll sure try. Wow! That blew my mind! "What's the difference?" How can you say that? One job forever? 
-              That's an insane choice to have to make. I'm relieved. Now we only have to make one decision in life.</p>
- 
-            <p>But, Adam, how could they never have told us that? Why would you question anything? We're bees. We're the most perfectly functioning 
-              society on Earth. You ever think maybe things work a littletoo well here? Like what? Give me one example. I don't know. But you know what 
-              <img src="images/Phone Images/beemoviefloatleft.jpg" alt="Walter Camp" class="float-left"> 
-              I'm talking about. Please clear the gate. Royal Nectar Force on approach. Wait a second. Check it out. - Hey, those are Pollen Jocks! - 
-              Wow. I've never seen them this close. They know what it's like outside the hive. Yeah, but some don't come back. - Hey, Jocks! - 
-              Hi, Jocks! You guys did great! You're monsters! You're sky freaks! I love it! I love it! I wonder where they were. - I don't know. 
-              Their day's not planned. Outside the hive, flying who knows where, doing who knows what. You can't just decide to be a Pollen Jock. 
-              You have to be bred for that. Right. Look. That's more pollen than you and I will see in a lifetime. It's just a status symbol. 
-              Bees make too much of it. Perhaps. Unless you're wearing it and the ladies see you wearing it.</p>
-
-            <p>Those ladies? Aren't they our cousins too? Distant. Distant. Look at these two. - Couple of Hive Harrys. - Let's have fun with them. 
-              It must be dangerous being a Pollen Jock. Yeah. Once a bear pinned me against a mushroom! He had a paw on my throat, and with the other, 
-              he was slapping me! - Oh, my! - I never thought I'd knock him out. What were you doing during this? Trying to alert the authorities. 
-              I can autograph that. A little gusty out there today, wasn't it, comrades? Yeah.</p>
+            <p>
+              Stanley Kubrick’s The Shining (1980) is widely regarded as one of the greatest horror films of all time. Its chilling atmosphere, unsettling performances, and psychological depth have cemented its place in cinematic history. But now, over 40 years later, does The Shining still hold up as the scariest film ever, or has time dulled its terror?
+              <br><br>
+              <img src="images/article-images/15-theshining-pictures/Right.jpg" alt="The Shining Iconic Scene" class="float-right">
+              With modern horror evolving through jump scares, psychological thrillers, and found-footage techniques, it’s worth revisiting Kubrick’s vision to see if it still has the power to unnerve audiences today.
+              </p>
+              
+              <p>
+              Atmosphere Over Jump Scares: Unlike many modern horror films that rely on quick jump scares, The Shining is a slow-burning descent into madness. The eerie, isolated setting of the Overlook Hotel, the haunting use of silence, and the methodical build-up of tension create an experience that lingers long after the credits roll.
+              </p>
+              
+              <p>
+              The film’s unsettling score, filled with distorted sounds and piercing strings, only amplifies the tension. There’s never a moment of true relief, as even the most mundane scenes carry an undercurrent of dread.
+              </p>
+              
+              <p>
+              Jack Nicholson’s Performance Still Terrifies: One of the most iconic elements of The Shining is Jack Nicholson’s portrayal of Jack Torrance. His transformation from struggling writer to unhinged madman remains one of cinema’s most disturbing character arcs.
+              </p>
+              
+              <p>
+              Nicholson’s performance, filled with wild-eyed stares and eerie unpredictability, ensures that the audience never feels safe. Scenes like the "Here's Johnny!" moment or his chilling conversations with Lloyd the bartender continue to send shivers down spines, proving that great horror isn’t just about supernatural frights—it’s about human unpredictability.
+              </p>
+              
+              <p>
+              A Timeless Visual and Psychological Horror: The Shining isn’t just scary because of ghosts or gore—it’s psychological horror at its finest. The themes of isolation, madness, and family trauma are just as unsettling today as they were in 1980.
+              <br><br>
+              <img src="images/article-images/15-theshining-pictures/Left.jpg" alt="The Overlook Hotel in The Shining" class="float-left">
+              The use of long tracking shots, symmetrical framing, and unnatural lighting makes the Overlook Hotel feel alive—an ominous force that slowly consumes Jack and threatens his family.
+              </p>
+              
+              <p>
+              Scenes like the twins in the hallway, the blood-filled elevator, and the mysterious Room 237 remain some of the most nightmarish moments in horror history. These images stick with viewers long after the film ends, proving that The Shining doesn’t need fast-paced scares to be terrifying.
+              </p>
+              
+              <p>
+              Has Horror Evolved Beyond It? While The Shining remains a masterpiece, horror has evolved significantly since its release. Films like Hereditary, The Witch, and It Follows have introduced new forms of psychological terror, while paranormal horror and found-footage scares have taken the genre in different directions.
+              </p>
+              
+              <p>
+              Yet, few films manage to maintain an atmosphere of fear as effectively as The Shining. Modern audiences may be used to faster pacing, but the film’s methodical storytelling and eerie ambiguity give it a timeless quality.
+              </p>
+              
+              <p>
+              Final Verdict: Is It Still the Scariest Film Ever? More than four decades after its release, The Shining remains one of the most unsettling and masterfully crafted horror films ever made. While modern horror has embraced more visceral scares, The Shining’s psychological terror still burrows deep into the mind.
+              </p>
+              
+              <p>
+              For some, newer horror films may deliver more immediate frights, but few can match The Shining’s ability to instill a lingering sense of unease. Whether you’re watching it for the first time or re-experiencing its horrors, one thing is certain—the Overlook Hotel will always be waiting.
+              </p>
+              
 
           </article>
         </main>
@@ -199,24 +210,29 @@
     </div>
   </div>
   
-  <footer class="page-footer">
-    <div class="page-wrapper footer-row">
-      <ul class="footer-list">
-        <li><a href="#">Terms and Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookies Policy</a></li>
-        <li><a href="#">Drinks Aware</a></li>
+<footer>
+  <div class="footer-container">
+      <!-- Social Media Icons with Images -->
+      <div class="social-icons">
+          <a href="#"><img src="images/Social Media Icons/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/Social Media Icons/Instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/Social Media Icons/Twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/Social Media Icons/Google.png" alt="Google"></a>
+          <a href="#"><img src="images/Social Media Icons/Youtube.png" alt="YouTube"></a>
+      </div>
+
+      <!-- Footer Navigation Links -->
+      <ul class="footer-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Articles</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-      <ul class="footer-list">
-        <li><a href="#">Find Us</a></li>
-        <li><a href="#">01314 773435</a></li>
-        <li><a href="#">enquiries@glencarron.com</a></li>
-      </ul>
-
-      <div class="copyright">GLENCARRON &copy;2023<br>All Rights Reserved</div>
-    </div>
-  </footer>
+      <!-- Copyright Information -->
+      <p class="copyright">Copyright &copy;2025; Designed by <span>Nathan</span></p>
+  </div>
+</footer>
 
 </body>
 </html>
