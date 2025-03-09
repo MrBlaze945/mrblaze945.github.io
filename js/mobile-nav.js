@@ -58,65 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ----------------------------- TABS SECTION ----------------------------- */
 
 /* ------------------------------ AUT0 SCROLL ----------------------------- */
-document.addEventListener("DOMContentLoaded", function () {
-    function autoScroll(containerSelector, itemSelector, interval = 3000) {
-        const container = document.querySelector(containerSelector);
-        if (!container) return;
-  
-        const items = container.querySelectorAll(itemSelector);
-        let index = 0;
-        let autoScrollInterval;
-        let userInteracted = false;
-  
-        function scrollNext() {
-            if (!items.length || userInteracted) return;
-  
-            index++;
-            if (index >= items.length) {
-                index = 0;
-            }
-  
-            const scrollAmount = items[index].offsetLeft - container.offsetLeft;
-            container.scrollTo({
-                left: scrollAmount,
-                behavior: "smooth",
-            });
-        }
-  
-        function startAutoScroll() {
-            autoScrollInterval = setInterval(scrollNext, interval);
-        }
-  
-        function stopAutoScroll() {
-            userInteracted = true; // User has interacted, stop auto-scrolling
-            clearInterval(autoScrollInterval);
-        }
-  
-        // Start auto-scrolling initially
-        startAutoScroll();
-  
-        // Detect user interaction (Mouse, Touch, Wheel, or Button Click)
-        container.addEventListener("mousedown", stopAutoScroll);
-        container.addEventListener("touchstart", stopAutoScroll);
-        container.addEventListener("wheel", stopAutoScroll);
-  
-        // Stop auto-scroll when user clicks left or right button
-        document.querySelectorAll(".scroll-left, .scroll-right").forEach(button => {
-            button.addEventListener("click", stopAutoScroll);
-        });
-  
-        // Detect user scrolling, but prevent false positives from script-triggered scrolling
-        let lastScrollLeft = container.scrollLeft;
-        container.addEventListener("scroll", () => {
-            if (Math.abs(container.scrollLeft - lastScrollLeft) > 5) {
-                stopAutoScroll();
-            }
-            lastScrollLeft = container.scrollLeft;
-        });
-    }
-  
-    autoScroll(".featured-news-grid", ".featured-news-card");
-  });
+v
 
 /* ------------------------------ AUT0 SCROLL ----------------------------- */
 
