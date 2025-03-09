@@ -58,7 +58,68 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ----------------------------- TABS SECTION ----------------------------- */
 
 /* ------------------------------ AUT0 SCROLL ----------------------------- */
-v
+document.addEventListener("DOMContentLoaded", function () {
+    function autoScroll(containerSelector, itemSelector, interval = 3000) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const items = container.querySelectorAll(itemSelector);
+        let index = 0;
+        let autoScrollInterval;
+        let userInteracted = false;
+
+        function scrollNext() {
+            if (userInteracted || !items.length) return; // Stop auto-scroll only if user interacted
+
+            index++;
+            if (index >= items.length) {
+                index = 0;
+            }
+
+            const scrollAmount = items[index].offsetLeft - container.offsetLeft;
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth",
+            });
+        }
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(scrollNext, interval);
+        }
+
+        function stopAutoScroll() {
+            if (!userInteracted) { 
+                userInteracted = true;
+                clearInterval(autoScrollInterval); // Stops the interval so it doesn't keep scheduling movements
+            }
+        }
+
+        // Start auto-scrolling initially
+        startAutoScroll();
+
+        // Detect user interaction and stop scrolling permanently
+        ["mousedown", "touchstart", "wheel"].forEach(event => {
+            container.addEventListener(event, stopAutoScroll, { once: true });
+        });
+
+        // Stop auto-scroll when user clicks left or right buttons
+        document.querySelectorAll(".scroll-left, .scroll-right").forEach(button => {
+            button.addEventListener("click", stopAutoScroll, { once: true });
+        });
+
+        // Detect user scrolling and stop auto-scroll permanently
+        let lastScrollLeft = container.scrollLeft;
+        container.addEventListener("scroll", () => {
+            if (Math.abs(container.scrollLeft - lastScrollLeft) > 5) {
+                stopAutoScroll();
+            }
+            lastScrollLeft = container.scrollLeft;
+        }, { once: true });
+    }
+
+    autoScroll(".featured-news-grid", ".featured-news-card");
+});
+
 
 /* ------------------------------ AUT0 SCROLL ----------------------------- */
 
