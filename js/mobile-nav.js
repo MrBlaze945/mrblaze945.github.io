@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
   
-// JavaScript for scrolling article cards
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".scroll-container").forEach((container) => {
         const scrollArea = container.querySelector(".review-news-grid");
@@ -172,24 +171,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let leftButton = container.querySelector(".review-scroll-left");
         let rightButton = container.querySelector(".review-scroll-right");
 
-        // Ensure only existing buttons are used, prevent duplicates
         if (!leftButton || !rightButton) return;
 
-        // Ensure buttons are always on top
+        // Make sure buttons do not block article links
         leftButton.style.zIndex = "50";
         rightButton.style.zIndex = "50";
-        scrollArea.style.position = "relative"; 
+        scrollArea.style.position = "relative";
 
-        // Lower the z-index of the clickable links so buttons work
-        container.querySelectorAll(".review-hypertext").forEach(link => {
-            link.style.zIndex = "5"; 
-            link.style.pointerEvents = "none"; // Prevents blocking clicks on buttons
-        });
-
-        // Function to get the width of a single article card
         function getArticleWidth() {
             const article = scrollArea.querySelector(".review-news-card");
-            return article ? article.offsetWidth + 10 : 200; // Default width
+            return article ? article.offsetWidth + 10 : 200;
         }
 
         leftButton.addEventListener("click", () => {
