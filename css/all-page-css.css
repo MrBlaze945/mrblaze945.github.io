@@ -66,18 +66,6 @@ max-width: 100%;
 min-width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* -------------------------------| Font End |-------------------------------- */
 
 /* -------------------------------| Body Start |-------------------------------- */
@@ -109,90 +97,6 @@ padding-bottom: 4rem;
 
 /* ------------------------------| Header Start |------------------------------ */
 
-/*   .page-header {
-width: 100vw;
-max-width: 100%;
-text-align: center;
-}
-
-.page-header-bottom {
-background-color: #edd2af;
-} */
-
-/* -------------------------------| Nav Bar Start |-------------------------------- */
-
-/*   .mobile-top-row {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.page-title {
-text-align: left;
-}
-
-.page-title a {
-color: black;
-text-decoration: none;
-margin-left: 20px;
-}
-
-.nav-button {
-cursor: pointer;
-padding: 0.5rem 0;
-width: 50px;
-padding-right: 20px;
-}
-
-.nav-list,
-.sub-links {
-list-style: none;
-padding: 0;
-}
-
-.nav-list {
-margin: 0;
-padding-bottom: 1rem;
-display: flex;
-justify-content: center;
-gap: 2rem;
-margin-top: 0rem;
-padding-bottom: 0px;
-}
-
-.sub-links {
-display: flex;
-justify-content: center;
-gap: 4rem;
-padding-bottom: 0px;
-padding-top: 5px;
-}
-
-.nav-list a,
-.sub-links a {
-color: black;
-display: block;
-font-size: 1.5rem;
-}
-
-.nav-list a {
-font-weight: bold;
-padding: 1rem 0;
-text-decoration: none;
-margin-right: 20px;
-}
-
-.social-media {
-display: flex;
-justify-content: center;
-gap: 3rem;
-padding-bottom: 0.5rem;
-}
-
-.social-media img {
-width: 60px;
-} */
-
 .page-header {
   background-color: #111;
   width: 100%;
@@ -213,7 +117,9 @@ width: 60px;
   height: 100%;
 }
 
-/* Title */
+/* -------------------------------| Nav Bar Start |-------------------------------- */
+
+
 .page-title a {
   color: white;
   text-decoration: none;
@@ -221,7 +127,6 @@ width: 60px;
   font-weight: bold;
 }
 
-/* Desktop Navigation */
 .nav-menu {
   display: flex;
 }
@@ -273,7 +178,6 @@ max-width: 800px;
 margin: 0 auto;
 }
 
-/* Social Media Icons */
 .social-icons {
 margin-bottom: 15px;
 }
@@ -285,7 +189,7 @@ transition: 0.3s;
 }
 
 .social-icons img {
-width: 40px; /* Adjust size of social icons */
+width: 40px;
 height: 40px;
 border-radius: 50%;
 transition: 0.3s;
@@ -295,7 +199,6 @@ transition: 0.3s;
 opacity: 0.7;
 }
 
-/* Footer Menu */
 .footer-menu {
 list-style: none;
 padding: 0;
@@ -318,7 +221,6 @@ transition: 0.3s;
 color: #ccc;
 }
 
-/* Copyright */
 .copyright {
 font-size: 14px;
 margin-top: 10px;
@@ -343,18 +245,16 @@ color: white;
   display: none;
 }
 
-/* Show Mobile Menu Button */
 .nav-button {
   display: block;
   width: 40px;
   cursor: pointer;
 }
 
-/* Dropdown Mobile Menu (Hidden by Default) */
 .mobile-dropdown {
-  display: none; /* Hidden initially */
+  display: none;
   position: absolute;
-  top: 100%; /* Appears directly below the header */
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: #111;
@@ -362,13 +262,12 @@ color: white;
   z-index: 999;
 }
 
-/* Mobile Menu List - 2 Items Per Row */
 .mobile-dropdown ul {
   list-style: none;
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(2, auto); /* Ensures 2 per row */
-  gap: 10px 30px; /* Adds spacing between rows and columns */
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 30px;
   text-align: center;
 }
 
@@ -394,16 +293,14 @@ color: white;
 
 .footer-menu {
 display: grid;
-grid-template-columns: repeat(2, auto); /* Creates two columns */
+grid-template-columns: repeat(2, auto);
 justify-content: center;
-gap: 10px 30px; /* Adds spacing between rows and columns */
+gap: 10px 30px;
 }
 
 .footer-menu li {
 text-align: center;
 }
-
-
 
 /* -------------------------------| Footer End |-------------------------------- */
 
@@ -417,19 +314,17 @@ text-align: center;
   display: none;
 }
 
-/* Show Mobile Menu Button */
 .nav-button {
   display: block;
   width: 40px;
   cursor: pointer;
 }
 
-/* Corner Dropdown Menu */
 .mobile-dropdown {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
-  top: 60px; /* Positions dropdown below the header */
-  right: 0px; /* Aligns dropdown to the right */
+  top: 60px;
+  right: 0px;
   background-color: #111;
   width: 180px;
   border-radius: 5px;
@@ -441,7 +336,6 @@ text-align: center;
   padding: 10px 0;
 }
 
-/* Mobile Menu List (Stacked Items) */
 .mobile-dropdown ul {
   list-style: none;
   padding: 0;

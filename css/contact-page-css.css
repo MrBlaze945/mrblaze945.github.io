@@ -84,7 +84,6 @@
   margin-bottom: 5px;
 }
 
-/* Style the select field to match the input fields */
 .contact-page .input-field select {
   width: 100%;
   padding: 10px;
@@ -93,11 +92,10 @@
   font-family: 'EB Garamond', "Georgia", serif;
   font-size: 1rem;
   background-color: white;
-  appearance: none; /* Removes default styling on some browsers */
+  appearance: none;
   cursor: pointer;
 }
 
-/* Custom dropdown arrow only for the "Reason for Contacting" field */
 .contact-page .input-field.reason-for-contact {
   position: relative;
   margin: 0 !important;
@@ -127,14 +125,13 @@
   pointer-events: none;
   font-size: 0.8rem;
   color: #333;
-  line-height: 1; /* Ensures the arrow doesn't contribute to spacing */
-  height: 0; /* Prevents it from affecting layout */
+  line-height: 1;
+  height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Ensure focus and hover match input fields */
 .input-field select:hover,
 .input-field select:focus {
   border: 1px solid #dd9535;
@@ -148,7 +145,7 @@
   border-radius: 5px;
   font-family: 'EB Garamond', "Georgia", serif;
   font-size: 1.3rem;
-  min-height: 150px; /* Ensures a good default height */
+  min-height: 150px;
   background-color: white;
   resize: none;
 }
@@ -258,8 +255,6 @@
   font-size: 12px;
 }
 
-/* Contact Form Section */
-
 .contact-form {
   flex: 1;
   min-width: 300px;
@@ -280,12 +275,12 @@
 .input-group {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap; /* Ensures elements wrap instead of overflowing */
+  flex-wrap: wrap;
 }
 
 .input-field {
-  flex: 1; /* Makes both input fields share space evenly */
-  min-width: 100px; /* Prevents the inputs from getting too small */
+  flex: 1;
+  min-width: 100px;
 }
 
 .contact-page .input-field label {
@@ -294,7 +289,7 @@
 }
 
 .input-group .input-field input {
-  width: 100%; /* Ensures inputs take full width of their container */
+  width: 100%;
 }
 
 .contact-page .contact-options {
@@ -349,7 +344,6 @@
   background: #333;
 }
 
-/* Image Section */
 .contact-image {
   flex: 1;
   min-width: 300px;
@@ -479,7 +473,7 @@
   }
 
   .input-group {
-    flex-direction: column; /* Stacks input fields on smaller screens */
+    flex-direction: column;
   }
 }
 

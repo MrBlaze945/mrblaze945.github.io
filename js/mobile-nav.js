@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu = document.getElementById("mobile-menu");
 
     navButton.addEventListener("click", function () {
-        // Toggle visibility of the dropdown menu
+
         if (mobileMenu.style.display === "block") {
             mobileMenu.style.display = "none";
         } else {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Close menu when clicking outside of it
+
     document.addEventListener("click", function (event) {
         if (!navButton.contains(event.target) && !mobileMenu.contains(event.target)) {
             mobileMenu.style.display = "none";
@@ -33,24 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ----------------------------- TABS SECTION ----------------------------- */
 
 function showTab(tabName) {
-  // Hide all tab contents
+
   document.querySelectorAll('.tab-content').forEach(tab => {
       tab.style.display = 'none';
   });
 
-  // Remove active class from all buttons
+
   document.querySelectorAll('.tabs button').forEach(button => {
       button.classList.remove('active');
   });
 
-  // Show the selected tab
+
   document.getElementById(tabName).style.display = 'block';
 
-  // Set active class on clicked button
+
   document.querySelector(`.tabs button[onclick="showTab('${tabName}')"]`).classList.add('active');
 }
 
-// Ensure the default tab is visible
+
 document.addEventListener("DOMContentLoaded", () => {
   showTab('popular');
 });
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let userInteracted = false;
 
         function scrollNext() {
-            if (userInteracted || !items.length) return; // Stop auto-scroll only if user interacted
+            if (userInteracted || !items.length) return;
 
             index++;
             if (index >= items.length) {
@@ -90,24 +90,20 @@ document.addEventListener("DOMContentLoaded", function () {
         function stopAutoScroll() {
             if (!userInteracted) { 
                 userInteracted = true;
-                clearInterval(autoScrollInterval); // Stops the interval so it doesn't keep scheduling movements
+                clearInterval(autoScrollInterval);
             }
         }
 
-        // Start auto-scrolling initially
         startAutoScroll();
 
-        // Detect user interaction and stop scrolling permanently
         ["mousedown", "touchstart", "wheel"].forEach(event => {
             container.addEventListener(event, stopAutoScroll, { once: true });
         });
 
-        // Stop auto-scroll when user clicks left or right buttons
         document.querySelectorAll(".scroll-left, .scroll-right").forEach(button => {
             button.addEventListener("click", stopAutoScroll, { once: true });
         });
 
-        // Detect user scrolling and stop auto-scroll permanently
         let lastScrollLeft = container.scrollLeft;
         container.addEventListener("scroll", () => {
             if (Math.abs(container.scrollLeft - lastScrollLeft) > 5) {
@@ -123,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ------------------------------ AUT0 SCROLL ----------------------------- */
 
-// JavaScript for scrolling article cards
+/* ------------------------------ BUTTON CONTROLLS ----------------------------- */
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".scroll-container").forEach((container) => {
       const scrollArea = container.querySelector(".news-grid, .featured-news-grid");
@@ -132,13 +129,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let leftButton = container.querySelector(".scroll-left");
       let rightButton = container.querySelector(".scroll-right");
   
-      // Ensure only existing buttons are used, prevent duplicates
       if (!leftButton || !rightButton) return;
   
-      // Function to get the width of a single article card
       function getArticleWidth() {
         const article = scrollArea.querySelector(".news-card, .featured-news-card");
-        return article ? article.offsetWidth + 10 : 200; // Default width
+        return article ? article.offsetWidth + 10 : 200;
       }
   
       leftButton.addEventListener("click", () => {
@@ -151,18 +146,16 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollArea.scrollBy({ left: articleWidth, behavior: "smooth" });
       });
   
-      // Ensure buttons appear above links
       leftButton.style.zIndex = "20";
       rightButton.style.zIndex = "20";
       scrollArea.style.position = "relative"; 
   
-      // Lower the z-index of the clickable links so buttons work
       container.querySelectorAll(".review-hypertext").forEach(link => {
         link.style.zIndex = "5"; 
       });
     });
 });
-  
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".scroll-container").forEach((container) => {
         const scrollArea = container.querySelector(".review-news-grid");
@@ -173,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!leftButton || !rightButton) return;
 
-        // Make sure buttons do not block article links
         leftButton.style.zIndex = "50";
         rightButton.style.zIndex = "50";
         scrollArea.style.position = "relative";
@@ -194,3 +186,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+/* ------------------------------ BUTTON CONTROLLS ----------------------------- */
